@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fdfdfd;
+    color: #333;
+  }
+  
+  /* Header Section */
+  #header_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Left Section (Logo or Branding) */
+  #header_left_section {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Logo Styling */
+  #header_logo {
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+  }
+  #header_logo:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Right Section (Buttons or Navigation) */
+  #header_right_section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* Buttons */
+  .header_btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  .header_btn:hover {
+    background-color: white;
+    color: #4e54c8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+  }
+  #body_section{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .res-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .res-card {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  /* Container for shimmer cards */
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Individual shimmer card */
+.shimmer-card {
+  width: 250px;
+  height: 300px;
+  background: #f6f7f8;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shimmer animation effect */
+.shimmer-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150px;
+  height: 100%;
+  width: 150px;
+  background: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #e0e0e0 50%,
+    #f6f7f8 100%
+  );
+  animation: loading 1.2s infinite;
+}
+
+/* Animation keyframes */
+@keyframes loading {
+  0% {
+    left: -150px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+/* Add a glowing hover effect */
+/* BUTTON STYLING */
+.btn {
+  background-color: #ff6f00;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin: 5px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e65100;
+}
+
+/* SEARCH BAR */
+.search-bar {
+  text-align: center;
+  margin: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 250px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.search-bar input:focus {
+  border-color: #ff6f00;
+}
+
+/* CARD CONTAINER */
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+/* RESTAURANT CARD (in RestaurantCard.js) */
+.res-card {
+  width: 250px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.res-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.res-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.res-card h3 {
+  font-size: 20px;
+  padding: 10px 15px 0;
+  color: #333;
+}
+
+.res-card p {
+  font-size: 16px;
+  padding: 5px 15px;
+  color: #777;
+}
